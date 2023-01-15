@@ -1,5 +1,20 @@
 // Assignment code here
 
+var generateBtn = document.querySelector(#enerate");
+                                         
+const myArrayUpper = Array.from(Array(26)).map((e, i) => i + 65);
+const alphabetUpper = myArrayUpper.map((x) => String.fromCharCode(x));
+
+const myArrayLower = Array.from(Array(26)).map((e, i) => i + 97);
+const alphabetLower = myArrayLower.map((x) => String.fromCharCode(x));
+
+const myArrayNumeric = Array.from(Array(10)).map((e, i) => i + 48);
+const numericArray = myArrayNumeric.map((x) => String.fromCharCode(x));
+
+const myArraySpecial = Array.from(Array(15)).map((e, i) => i + 33);
+const specCharArray = myArraySpecial.map((x) => String.fromCharCode(x));                                         
+                                                                              
+                                         
 //define generatePassword function
 function generatePassword(){
 
@@ -13,10 +28,10 @@ var characterLength = window.prompt("Please choose the length of your password.\
 var pwLength = parseInt(characterLength);
 
 //user chooses properities of characters for password 
-if (pwLength > && pwLength < 129) {
+if (pwLength > 7 && pwLength < 129) {
   var lowerCase = window.confirm(
     "do you want to include lowercase letters in your password?\nClick OK to include or cancel to exclude.");
-  var uperCase - window.confirm(
+  var upperCase - window.confirm(
     "do you want to include uppercase letters in your password?\nCLick OK to include or cancel to exclude.");
   var numericVal - window.confirm(
     "do you want to include numbers in your password?\nCLick OK to include or cancel to exclude.");
@@ -27,6 +42,27 @@ if (pwLength > && pwLength < 129) {
   window.alert("that is an invalid entry.  Select a length between 8 and 128");
   return generatePassword();
 }
+  
+  var pool = [];
+
+  if (upperCase == true) pool.push(...alphabetUpper);
+
+  if (lowerCase == true) pool.push(...alphabetLower);
+
+  if (numericVal == true) pool.push(...numericArray);
+
+  if (specChar == true) pool.push(...specCharArray);
+
+  if (lowerCase || upperCase || numericVal || specChar) {
+    for (var i = 0; i < pwLength; i++) {
+      pwResults += pool[Math.floor(Math.random() * pool.length)];
+    }
+  } else {
+    window.alert(
+      "A minimum of one variable must be selected to generate a password."
+    );
+    return generatePassword();
+  }
   return pwResults();
 }
 
