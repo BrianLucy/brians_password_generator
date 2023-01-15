@@ -5,11 +5,14 @@ function generatePassword(){
 
 //define local variable  
 var pwResults = "";
+  
 //user can choose length of password 8-128
-  var characterLength = window.prompt("Please choose the length of your password. \n Password length must be between 8 and 128 charcters long. \n Input that value in the box and clock OK."0:
+var characterLength = window.prompt("Please choose the length of your password.\nPassword length must be between 8 and 128 charcters long. \n Input that value in the box and clock OK.");
+
 //user input is a string and needs to be converted to interger
 var pwLength = parseInt(characterLength);
-  
+
+//user chooses properities of characters for password 
 if (pwLength > && pwLength < 129) {
   var lowerCase = window.confirm(
     "do you want to include lowercase letters in your password?\nClick OK to include or cancel to exclude.");
@@ -25,6 +28,18 @@ if (pwLength > && pwLength < 129) {
   return generatePassword();
 }
   return pwResults();
+}
+
+
+
+
+
+
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector(#password");
+  
+   passwordText.value = password;
 }
 
   
