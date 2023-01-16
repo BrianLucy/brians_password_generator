@@ -1,6 +1,7 @@
 // Assignment code here
 
-var generateBtn = document.querySelector(#enerate");
+// Get references to the #generate element
+var generateBtn = document.querySelector(#generate");
                                          
 const myArrayUpper = Array.from(Array(26)).map((e, i) => i + 65);
 const alphabetUpper = myArrayUpper.map((x) => String.fromCharCode(x));
@@ -65,25 +66,6 @@ if (pwLength > 7 && pwLength < 129) {
   }
   return pwResults();
 }
-
-
-
-
-
-
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector(#password");
-  
-   passwordText.value = password;
-}
-
-  
-  
-  
-  
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
