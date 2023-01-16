@@ -1,7 +1,7 @@
 // Assignment code here
 
 // Get references to the #generate element
-var generateBtn = document.querySelector(#generate");
+var generateBtn = document.querySelector("#generate");
                                          
 const myArrayUpper = Array.from(Array(26)).map((e, i) => i + 65);
 const alphabetUpper = myArrayUpper.map((x) => String.fromCharCode(x));
@@ -32,11 +32,11 @@ var pwLength = parseInt(characterLength);
 if (pwLength > 7 && pwLength < 129) {
   var lowerCase = window.confirm(
     "do you want to include lowercase letters in your password?\nClick OK to include or cancel to exclude.");
-  var upperCase - window.confirm(
+  var upperCase = window.confirm(
     "do you want to include uppercase letters in your password?\nCLick OK to include or cancel to exclude.");
-  var numericVal - window.confirm(
+  var numericVal = window.confirm(
     "do you want to include numbers in your password?\nCLick OK to include or cancel to exclude.");
-  var specChar - window.confirm(
+  var specChar = window.confirm(
     "do you want to include special characters in your password?\nCLick OK to include or cancel to exclude.");                        
 } else {
   //alert pops up if user enters number less than 8 or more than 128
@@ -64,7 +64,7 @@ if (pwLength > 7 && pwLength < 129) {
     );
     return generatePassword();
   }
-  return pwResults();
+  return pwResults;
 }
 
 // Write password to the #password input
