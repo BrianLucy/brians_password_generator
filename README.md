@@ -12,6 +12,8 @@ ACCEPTANCE CRITERIA
   when I click the generater button, then I want to receive a password generated according to length choice, upper/lower case choice and special character choice.
   
   SCREENSHOT OF DEPLOYED PAGE
+  ![image](https://user-images.githubusercontent.com/116689598/213322854-f083e2b4-be9a-49f5-8db9-c088ac883a41.png)
+
   
   LINK TO DEPLOYED PAGE
   https://brianlucy.github.io/not-so-friendly-parakeet/
